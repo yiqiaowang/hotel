@@ -26,14 +26,14 @@ def append_row(file_name, row):
 def create_csv(file_name):
     with open(file_name, 'w', newline='') as csvfile:
         data_writer = csv.writer(csvfile)
-        data_writer.writerow(['Collected on {}'.format(datetime.datetime.now().isoformat())])
+        data_writer.writerow(['Collected on {}'.format(datetime.datetime.now().strftime('%m/%d/%Y - %X'))])
         data_writer.writerow(['Arrival Date',
                               'Departure Date',
                               'Room Type',
+                              'Accommodation Type',
                               'Best Available Rate',
                               'Step Into Summer 1 Night',
                               'Advance Purchase Promotion'])
-
 
 def log(log_file, log_data):
 
